@@ -39,7 +39,7 @@ function Head() {
 
 function SignInButton() {
   return (
-    <button className=" hover:bg-blue-800 px-3 py-1 text-white text-nowrap rounded-md bg-blue-600 font-medium">
+    <button className=" hover:bg-blue-800 px-3 py-1 text-white text-nowrap rounded-md bg-blue-600 font-medium" title="This ain't working yet">
       Sign In
     </button>
   );
