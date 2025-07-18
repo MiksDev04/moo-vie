@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MovieDetails } from "../utils/movieApi";
+import PropTypes from 'prop-types';
 
 export default function ShowMovie({ movieId, setMovieId }) {
   const [movie, setMovieDetails] = useState(null);
@@ -252,3 +253,8 @@ export default function ShowMovie({ movieId, setMovieId }) {
     </div>
   );
 }
+
+ShowMovie.propTypes = {
+  movieId: PropTypes.number.isRequired,
+  setMovieId: PropTypes.func.isRequired,
+};

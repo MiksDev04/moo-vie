@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Search({ searchTerm, setSearchTerm }) {
 
   function handleSearch(e) {
@@ -32,3 +34,9 @@ export default function Search({ searchTerm, setSearchTerm }) {
     </div>
   );
 }
+
+
+Search.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
+};

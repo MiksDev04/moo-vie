@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import ShowMovie from "./ShowMovie";
 
 export default function Movies({ setSearchTerm, searchTerm, movies, pageNo, setPageNo }) {
@@ -121,3 +122,17 @@ function Movie({ setSearchTerm, movie, setMovieId }) {
     );
   }
 }
+
+Movies.propTypes = {
+  setSearchTerm: PropTypes.func.isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  movies: PropTypes.object.isRequired,
+  pageNo: PropTypes.number.isRequired,
+  setPageNo: PropTypes.func.isRequired,
+};
+
+Movie.propTypes = {
+  setSearchTerm: PropTypes.func.isRequired,
+  movie: PropTypes.object.isRequired,
+  setMovieId: PropTypes.func.isRequired,
+};

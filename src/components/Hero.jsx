@@ -1,4 +1,5 @@
 import Search from "./Search";
+import PropTypes from 'prop-types';
 
 export default function Hero({ searchTerm, setSearchTerm }) {
   return (
@@ -43,3 +44,8 @@ function SignInButton() {
     </button>
   );
 }
+
+Hero.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
+};
